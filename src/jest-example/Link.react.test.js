@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from './Link.react'
+import Link from './Link.react.js'
 import renderer from 'react-test-renderer';
 
 

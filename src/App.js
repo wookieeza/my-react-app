@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Foo from './enzyme/Foo';
+import Foo from './enzyme/foo-example/Foo';
 
 class App extends Component {
   render() {

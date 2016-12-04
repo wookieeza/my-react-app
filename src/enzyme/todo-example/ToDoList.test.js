@@ -10,13 +10,14 @@ const createComponent = (type, title, complete, onCompleteChange) => {
 
     return React.createClass({
         displayName: type,
-        propTypes: {
+        propTypes: {key: React.PropTypes.string,
            title: React.PropTypes.string,
            complete: React.PropTypes.bool,
            onCompleteChange: React.PropTypes.func
         },
         getDefaultProps() {
             return {
+              key:title,
               title: title,
               complete: complete,
               onCompleteChange: onCompleteChange
@@ -46,7 +47,7 @@ describe('<ToDoList />', () => {
         const items = [createComponent("ToDoItem", "one", false),createComponent("ToDoItem","two", true)];
         const wrapper = shallow(<ToDoList items={items} />);
 
-        console.log("test "+wrapper.find('.todo-list').text());
+        //console.log("test "+wrapper.find('.todo-list').text());
         expect(wrapper.find(ToDoItem).length).toBe(2);
 
     });

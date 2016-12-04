@@ -7,7 +7,7 @@ export default class ToDoList extends React.Component {
         const {items, onChange} = this.props;
         return (
             <div className="todo-list">
-                {items.map(item => <ToDoItem key={item.id} item={item} onCompleteChange={onChange} />)}
+                {items.map(item => <ToDoItem key={item.key} item={item} onCompleteChange={onChange} />)}
             </div>
         );
     }
