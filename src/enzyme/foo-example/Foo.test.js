@@ -21,3 +21,10 @@ it('toggles the label on change',()=>{
 
     expect(foo.text()).toEqual('alpha');
 });
+
+it('receives prop values',()=> {
+   const foo = shallow(
+       <Foo one="alpha" two="beta"/>
+   );
+    expect(foo.text()).toEqual('beta');
+});
